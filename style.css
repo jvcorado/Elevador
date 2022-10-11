@@ -89,7 +89,7 @@ main{
 
 .painel{
     width: 6rem;
-    background-color:rgb(161, 161, 161);
+    background-color:rgb(211, 211, 211);
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -102,7 +102,7 @@ main{
 
 .painel button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: orange;
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,14 +110,16 @@ main{
     height: 2rem;
     border-radius: 50%;
     border-color: black;
-    background-color: white;
     margin: 1.25rem;
     cursor: pointer;
+    background-color: #a9eca9;
+
+}
+.painel button:disabled{
+    background-color: #ecada9;
 }
 
-.painel button:hover{
-    background-color:  rgb(102, 185, 102);
-}
+
 
 @keyframes transicaoSubir{
     0%{

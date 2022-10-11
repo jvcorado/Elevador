@@ -29,6 +29,7 @@ function mostraTrianguloDescendo(){
 function descerTerreoAndar(){
     andar = "T";
     pos = 0;
+   
 
     if(pos === 0){
         setTimeout(()=>{
@@ -54,16 +55,18 @@ function descerTerreoAndar(){
         },6000);
     };
     
-
+     
     document.querySelector('#btn-primeiro').disabled= false;
     document.querySelector('#btn-segundo').disabled= false;
     document.querySelector('#btn-terreo').disabled= true;
     document.querySelector('#btn-terceiro').disabled= false;
+
 }
 
 function subirPrimeiroAndar(){
     andar = 1;
     pos = 0;
+
 
     if(pos === 0){
         setTimeout(()=>{
@@ -87,6 +90,7 @@ function subirPrimeiroAndar(){
     
     document.querySelector('#btn-terreo').disabled= false;
     document.querySelector('#btn-primeiro').disabled= true;
+   
 }
 
 
@@ -118,16 +122,17 @@ function subirSegundoAndar(){
         },6000);
     }
    
-   
     document.querySelector('#btn-terreo').disabled= false;
     document.querySelector('#btn-primeiro').disabled= true;
     document.querySelector('#btn-segundo').disabled= true;
     document.querySelector('#btn-terceiro').disabled= false;
+
 }
 
 function subirTerceiroAndar(){
     andar = 3;
     pos = 0;
+
 
     if(pos === 0){
         setTimeout(()=>{
@@ -154,9 +159,9 @@ function subirTerceiroAndar(){
         },7000);
     }
     
-
     document.querySelector('#btn-terreo').disabled= false;
     document.querySelector('#btn-terceiro').disabled= true;
     document.querySelector('#btn-primeiro').disabled= true;
     document.querySelector('#btn-segundo').disabled= true;
+  
 }
