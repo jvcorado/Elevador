@@ -71,9 +71,7 @@ function subirPrimeiroAndar(){
         setTimeout(()=>{
             document.querySelector('.img-terreo').src="img/elevadorFechado.jpg";
         },2000);
-    
-        mostraTrianguloSubindoo();
-
+        mostraTrianguloSubindo();
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = andar;
         },3000);
@@ -103,8 +101,6 @@ function subirSegundoAndar(){
         setTimeout(()=>{
             document.querySelector('.img-terreo').src="img/elevadorFechado.jpg";
         },2000);
-
-
         mostraTrianguloSubindo();
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = 1;
@@ -139,8 +135,6 @@ function subirTerceiroAndar(){
         setTimeout(()=>{
             document.querySelector('.img-terreo').src="img/elevadorFechado.jpg";
         },2000);
-
-
         mostraTrianguloSubindo();
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = 1;
