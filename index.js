@@ -10,6 +10,7 @@ const numberAndar = document.querySelectorAll('#numberAndar');
 const triangulo = document.querySelector('.triangulo');
 const trianguloDescendo = document.querySelector('.trianguloDescendo');
 
+
 let andar = null;
 let pos = null;
 
@@ -21,7 +22,7 @@ function mostraTrianguloSubindo(){
 
 function mostraTrianguloDescendo(){
     setTimeout(()=>{
-        trianguloDescendo.style.animation = 'transicaoDescer 8s linear '; 
+        trianguloDescendo.style.animation = 'transicaoDescer 6s linear '; 
     },2000);
 }
 
@@ -37,7 +38,7 @@ function descerTerreoAndar(){
             document.querySelector('.img-terceiroAndar').src="img/elevadorFechado.jpg";
         },2000);
 
-
+        mostraTrianguloDescendo();
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = 2;
         },3000);

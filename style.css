@@ -116,7 +116,7 @@ main{
 }
 
 .painel button:hover{
-    background-color: rgb(170, 170, 170);
+    background-color:  rgb(102, 185, 102);
 }
 
 @keyframes transicaoSubir{
@@ -132,11 +132,11 @@ main{
 
 @keyframes transicaoDescer{
     0%{
-        border-color: transparent transparent#ecada9  transparent; 
+        border-color: #ecada9 transparent transparent transparent; 
     }
 
     100%{
-        border-color: transparent transparent rgb(185, 102, 102) transparent; 
+        border-color: rgb(185, 102, 102) transparent transparent transparent; 
       
     }
 }
