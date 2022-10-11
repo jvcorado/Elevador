@@ -21,7 +21,7 @@ main{
 
 .container{
     width: 10rem;
-    height: calc(97vh);
+    height: 97vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,8 +33,22 @@ main{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: rgb(161, 161, 161);
+}
+.triangulo{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent#bdc0bd  transparent; 
+}
+.trianguloDescendo{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: #bdc0bd transparent transparent transparent;
 }
 #numberAndar{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -57,7 +71,7 @@ main{
 }
 
 .andar img{
-    width: 80%;
+    width: 60%;
     height: calc(100vh / 5 - 2px);
 }
 
@@ -98,31 +112,57 @@ main{
     cursor: pointer;
 }
 
-
 .painel button:hover{
     background-color: rgb(170, 170, 170);
+}
+
+@keyframes transicaoSubir{
+    0%{
+        border-color: transparent transparent#a9eca9  transparent; 
+    }
+
+    100%{
+        border-color: transparent transparent rgb(102, 185, 102) transparent; 
+      
+    }
+}
+
+@keyframes transicaoDescer{
+    0%{
+        border-color: transparent transparent#ecada9  transparent; 
+    }
+
+    100%{
+        border-color: transparent transparent rgb(185, 102, 102) transparent; 
+      
+    }
 }
 
 @media (max-width:500px) {
 
     
-    
     main{
-        height: calc(100vh - 10px);
+        height:100vh;
         background-size:cover;
         background-position: center;
-        
     }
 
     .container{
-        width: 50rem;
-        margin-left: 75px;
-        height: 50vh;
+        width: 100%;
+        margin-left:75px;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        justify-content: space-between;
+    }
+    .tela{
+        background-color: #ffffff;
+        width: 100%;
+        height: 80px;
     }
     
     .andar{
         width: 100%;
-        height: calc(100vh / 4);
+        height: calc((100vh - 200px) / 4);
     }
     
     .andar img{

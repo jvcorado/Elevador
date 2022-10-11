@@ -7,37 +7,24 @@ const btnPrimeiro = document.querySelectorAll('#btn-primeiro');
 const btnSegundo = document.querySelectorAll('#btn-segundo');
 const btnTerceiro = document.querySelectorAll('#btn-terceiro');
 const numberAndar = document.querySelectorAll('#numberAndar');
-const triangulo = document.querySelector('.triangulo');
-const trianguloDescendo = document.querySelector('.trianguloDescendo');
-
+const triangulo = document.querySelectorAll(".triangulo");
 let andar = null;
 let pos = null;
-
-function mostraTrianguloSubindo(){
-    setTimeout(()=>{
-        triangulo.style.animation ='transicaoSubir 8s linear ';
-    },2000);
-}
-
-function mostraTrianguloDescendo(){
-    setTimeout(()=>{
-        trianguloDescendo.style.animation = 'transicaoDescer 8s linear '; 
-    },2000);
-}
 
 function descerTerreoAndar(){
     andar = "T";
     pos = 0;
 
     if(pos === 0){
+
         setTimeout(()=>{
-            document.querySelector('.img-terceiroAndar').src="img/elevadorSemiAberto.jpg";
+            document.querySelector('.img-terceirAndar').src="img/elevadorSemiAberto.jpg";
         },1000);
         setTimeout(()=>{
             document.querySelector('.img-terceiroAndar').src="img/elevadorFechado.jpg";
         },2000);
-
-
+    
+        
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = 2;
         },3000);
@@ -72,7 +59,9 @@ function subirPrimeiroAndar(){
             document.querySelector('.img-terreo').src="img/elevadorFechado.jpg";
         },2000);
     
-        mostraTrianguloSubindoo();
+        setTimeout(()=>{
+            document.getElementsByClassName(".triangulo").style.borderColor = "#000"
+        },2500);
 
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = andar;
@@ -86,6 +75,7 @@ function subirPrimeiroAndar(){
         },5000);
     }
     
+    
     document.querySelector('#btn-terreo').disabled= false;
     document.querySelector('#btn-primeiro').disabled= true;
 }
@@ -98,27 +88,23 @@ function subirSegundoAndar(){
 
     if(pos === 0){
         setTimeout(()=>{
-            document.querySelector('.img-terreo').src="img/elevadorSemiAberto.jpg";
+            document.querySelector('.img-primeiroAndar').src="img/elevadorSemiAberto.jpg";
         },1000);
         setTimeout(()=>{
-            document.querySelector('.img-terreo').src="img/elevadorFechado.jpg";
+            document.querySelector('.img-primeiroAndar').src="img/elevadorFechado.jpg";
         },2000);
-
-
-        mostraTrianguloSubindo();
-        setTimeout(()=>{
-            document.querySelector("#numberAndar").innerText = 1;
-        },3000);
+    
+    
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = andar;
-        },4000);
+        },3000);
         setTimeout(()=>{
     
             document.querySelector('.img-segundoAndar').src="img/elevadorSemiAberto.jpg";
-        },5000);
+        },4000);
         setTimeout(()=>{
             document.querySelector('.img-segundoAndar').src="img/elevadorAberto.jpg";
-        },6000);
+        },5000);
     }
    
    
@@ -134,29 +120,21 @@ function subirTerceiroAndar(){
 
     if(pos === 0){
         setTimeout(()=>{
-            document.querySelector('.img-terreo').src="img/elevadorSemiAberto.jpg";
+            document.querySelector('.img-segundoAndar').src="img/elevadorSemiAberto.jpg";
         },1000);
         setTimeout(()=>{
-            document.querySelector('.img-terreo').src="img/elevadorFechado.jpg";
-        },2000);
-
-
-        mostraTrianguloSubindo();
-        setTimeout(()=>{
-            document.querySelector("#numberAndar").innerText = 1;
-        },3000);
-        setTimeout(()=>{
-            document.querySelector("#numberAndar").innerText = 2;
-        },4000);
+            document.querySelector('.img-segundoAndar').src="img/elevadorFechado.jpg";
+        },2000); 
+        
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = andar;
-        },5000);
+        },3000);
         setTimeout(()=>{
             document.querySelector('.img-terceiroAndar').src="img/elevadorSemiAberto.jpg";
-        },6000);
+        },4000);
         setTimeout(()=>{
             document.querySelector('.img-terceiroAndar').src="img/elevadorAberto.jpg";
-        },7000);
+        },5000);
     }
     
 
